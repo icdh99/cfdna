@@ -4,7 +4,7 @@ import motif_analysis as m
 import plot_motifs as p
 import random_sequences as r
 
-@click.command()
+@click.command()     #dit zijn allemaal decorators
 @click.option('--bamfile', help = 'Give the path of a bamfile')
 @click.option('--random', default = False, help = 'Set to True (or something else) to generate random motifs')
 @click.option('--fastafile', help = 'Give the path of a fastafile')
@@ -16,7 +16,9 @@ import random_sequences as r
 
 
 def main(bamfile, random, fastafile, motifsize, dataset, freqfile, lenfile):          
-    #code you want to be run when you execute the script
+ #if you add a docstring here that will be given when you run help  
+ #main: code you want to 
+#be run when you execute the script
     if bamfile != None:                                                     #option to analyse and plot motifs from a bamfile
         print('there is a bamfile')
         plot_motifs_bamfile(bamfile, motifsize)
