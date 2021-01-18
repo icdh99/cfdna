@@ -2,7 +2,6 @@ import random
 import pandas as pd
 from natsort import natsorted
 
-
 def generate_random_sequence_from_freqfile(dataset, freqfile, lenfile, filepath = "/mnt/c/Users/icden/Data_practical/"):
     with open(f'{filepath}{dataset}_random_seq.fa', "w") as newfile:
         with open(f'{filepath}{lenfile}', 'r') as lengths:
