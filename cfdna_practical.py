@@ -37,7 +37,7 @@ def analyse_bamfile(bamfile, motifsize, saveplot, path):
         p.plot_all(a, path)
 
 def analyse_fastafile(fastafile, motifsize, saveplot, path): 
-    a = m.get_motif_fastafile(fastafile, motifsize, saveplot)
+    a = m.get_motif_fastafile(fastafile, motifsize)
     print(a)
     if saveplot != False:
         print('take a look in your folder! There should be a file named \'fig\'. Make sure to save it properly before you do the next analysis.')
