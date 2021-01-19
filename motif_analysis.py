@@ -60,8 +60,8 @@ def get_motif_fastafile(fastafile_path, last_n, subsample = False):
                 fwd3[line[-2:n-2:-1]] += 1
             i += 1
             if subsample:
-                if i > subsample:
-                    break 
+                if i > subsample:    #here is the error :(
+                    break
     motif = {"fwd3":fwd3, "fwd5":fwd5}
     return motif
 
