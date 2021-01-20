@@ -47,7 +47,7 @@ def analyse_fastafile(fastafile, motifsize, saveplot, path):
 @click.option('--dataset', '-d', help = 'enter the name of the dataset')
 @click.option('--freqfile', '-f', help = 'give a file with the frequencies of all sequences of a dataset per chromosome')
 @click.option('--lenfile', '-l', help = 'give a file with the frequences of each length per dataset')
-@click.option('--path', '-p',  default  = "mnt/c/Users/icden/Data_practical/", help = 'give the path to the files if the default filepath is insufficient')
+@click.option('--path', '-p',  default  = "/mnt/c/Users/icden/Data_practical/", help = 'give the path to the files if the default filepath is insufficient')
 @click.option('--random', '-r', default = None, help = 'set to True if you want to generate random sequences')
 @click.option('--number', '-n', default = 100000, help = 'set the number of sequences you want to randomly generate')
 
