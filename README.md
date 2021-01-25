@@ -13,7 +13,7 @@ Required packages:
   
   `pip install pysam`
   
-I suppose collections, random, matplotlib, pandas, and natsorted are default installed?
+(I suppose collections, random, matplotlib, pandas, and natsorted are default installed?)
 
 
 ### Installing
@@ -24,23 +24,18 @@ The script can work with both .bam and .fa files. There are two main functionali
 
 ### All help options:
 
-`python cfdna_practical.py --help`
+`python cfdna_practical.py --help` gives a general overview of the usage of the script and the subcommands
 
-Gives a general overview of the usage of the script and the subcommands
+`python cfdna_practical.py generate-fasta --help` lists the options for the subcommand generate-fasta, as will be described below.
 
-`python cfdna_practical.py generate-fasta --help`
-
-Lists the options for the subcommand generate-fasta, as will be described below.
-
-`python cfdna_practical.py motif-analysis --help`
-
-Lists the options for the subcommand motif-analysis, as will be described below.
+`python cfdna_practical.py motif-analysis --help` lists the options for the subcommand motif-analysis, as will be described below.
 
 ### Fasta file generation
 This subcommand can either generate a .fa file according to provided information about a dataset, or it can generate a .fa file with randomly generated sequences. 
+
 #### Control .fa file
 The required arguments of this subcommand are:
-`cfdna_practical.py generate-fasta --dataset 'name of dataset' --freqfile 'file.txt' --lenfile 'file.txt'`
+`python cfdna_practical.py generate-fasta --dataset 'name of dataset' --freqfile 'file.txt' --lenfile 'file.txt'`
 
 Freqfile indicates a file that harbours the frequencies of reads per chromosome. It is a .txt file and looks the following: 
 
@@ -56,16 +51,20 @@ Dataset indicates the name of the dataset that you are analysing so that this ca
 
 Further options are:
 `--path` 
+
 This gives the path to the folder where the files are located and saved, if the default path is not sufficient (which will be the case on another computer than my own).
 
 The output is a .fa file named DATASET_random_seq.fa.
 
 #### Random .fa file
 The required arguments of this subcommand are:
-`cfdna_practical.py generate-fasta --random True`
+`python cfdna_practical.py generate-fasta --random True`
+
 Set --random to True. 
+
 Further options are:
 `--number` (default = 100,000)
+
 This sets the amount of sequences the .fa file should contain.
 
 This results in a .fa file named 'random_sequences.fa'. 
@@ -74,7 +73,7 @@ This results in a .fa file named 'random_sequences.fa'.
 This subcommand analyses the end motifs of the read supplied in either a .fa or a .bam file. Optionally it generates a histogram with the counts per k-mer. 
 
 #### .bam file analysis
-`cfdna_practical.py motif-analysis --bamfile 'file.bam'`
+`python cfdna_practical.py motif-analysis --bamfile 'file.bam'`
 
 The required argument is --bamfile with the name of the bamfile that has to be analysed.
 
