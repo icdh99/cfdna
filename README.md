@@ -16,20 +16,22 @@ Required packages:
 Create a new conda environment and install all the required python packages as listed above. The package is tested with python 3.6.
 
 ## Usage
-The script can work with both .bam and .fa files. There are two main functionalities: (1) generation of a simulated cfdna .fa file by random choice from A,T,G,C or by random sampling fragments from a genome. (2) cfdna end motif analysis. The two functionalities are selected using subcommands `generate-fasta` and `motif-analysis`. Below we demonstrate how to use the subcommands, what options and arguments to supply, and what output will be generated. 
+The script can work with both .bam and .fa files. There are two main functionalities: (1) generation of a simulated cfdna .fa file by random choice from A, T, G, or C, or by randomly sampling fragments from a genome, and (2) cfdna end motif analysis. The two functionalities are selected using subcommands `generate-fasta` and `motif-analysis`. Below we demonstrate how to use the subcommands, what options and arguments to supply, and what output will be generated. 
 
-### Getting started:
+### Getting started
 
-`python cfdna_practical.py --help` gives a general overview of the usage of the script and the subcommands
+`python cfdna_practical.py --help` gives a general overview of the usage of the script and the subcommands.
 
 `python cfdna_practical.py generate-fasta --help` lists the options for the subcommand generate-fasta, as will be described below.
 
 `python cfdna_practical.py motif-analysis --help` lists the options for the subcommand motif-analysis, as will be described below.
 
 ### Fasta file generation
-This subcommand can either generate a .fa file according to provided information about a dataset, or it can generate a .fa file with randomly generated sequences. 
+This subcommand can either generate a control .fa file according to provided information about a dataset, or it can generate a .fa file with randomly generated sequences. 
 
-#### Simulate cfdna reads by random sampling from a genome based on given cfdna length distribution and frequency per chromosome: Control .fa file
+#### Simulate cfdna reads by random sampling from a genome based on given cfdna length distribution and frequency per chromosome: control .fa file
+A requirement for the proper working of this subcommand is the presence of human .fa files in your folder. (VERDER UITLEGGEN)
+
 The required arguments of this subcommand are:
 `python cfdna_practical.py generate-fasta --dataset 'name of dataset' --freqfile 'file.txt' --lenfile 'file.txt'`
 
@@ -52,7 +54,7 @@ This gives the path to the folder where the files are located and saved, if the 
 
 The output is a .fa file named DATASET_random_seq.fa.
 
-#### Simulate cfdna reads of set length by random selecting from A,T,G,C: Random .fa file
+#### Simulate cfDNA reads of set length by randomly selecting from A, T, G, or C: random .fa file
 The required arguments of this subcommand are:
 `python cfdna_practical.py generate-fasta --random True`
 
