@@ -25,7 +25,7 @@ def plot_all(df, path, figsize= (10,4)):
     #plot_kmer_dist([df['fwd3']], ["fwd 3' end"], [ "blue", "teal"], path, figsize= figsize)
     plot_kmer_dist([df['fwd5'], df['fwd3']], ["fwd 5' end", "fwd 3' end"], [ "red", "blue"], path, figsize= figsize)
 
-def plot_all_random(df, figsize= (10,4)):         #overbodig, mag weg 
-    plot_kmer_dist([df['fwd5']], ["fwd 5' end"], [ "red", "yellow"], figsize= figsize)
-    plot_kmer_dist([df['fwd3']], ["fwd 3'end"], [ "blue", "teal"], figsize= figsize)
-    plot_kmer_dist([df['fwd5'], df['fwd3']], ["fwd 5' end", "fwd 3' end"], [ "red", "blue"], figsize= figsize)
+def plot_all_random(df, figsize= (10,4)):         #to give the randomly generated datasets a different colour scheme
+    #plot_kmer_dist([df['fwd5']], ["fwd 5' end"], [ "goldenrod", "red"], figsize= figsize)
+    #plot_kmer_dist([df['fwd3']], ["fwd 3'end"], [ "teal", "blue"], figsize= figsize)
+    plot_kmer_dist([df['fwd5'], df['fwd3']], ["fwd 5' end", "fwd 3' end"], [ "goldenrod", "teal"], figsize= figsize)
