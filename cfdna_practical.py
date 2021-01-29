@@ -41,7 +41,7 @@ def analyse_fastafile(fastafile, motifsize, saveplot, path):
     print(a)
     if saveplot != False:
         print('take a look in your folder! There should be a file named \'fig\'. Make sure to save it properly before you do the next analysis.')
-        p.plot_all(a, path)
+        p.plot_all_random(a, path)
 
 @main.command()
 @click.option('--dataset', '-d', help = 'enter the name of the dataset')
