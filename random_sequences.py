@@ -19,7 +19,6 @@ def generate_random_sequence_from_freqfile(dataset, freqfile, lenfile, filepath 
                     s = generate_random_sequence(int(c), n)
                     newfile.write(f'>seq{i}_{x}\n{s}\n')
                     i += 1
-
 def make_dict_with_freqs(filename, filepath = "/mnt/c/Users/icden/Data_practical/"):
     n = ["chr", "counts"]
     df = pd.read_csv(f"{filepath}{filename}", sep = "\t", names = n, nrows = 23)
