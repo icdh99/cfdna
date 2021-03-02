@@ -35,15 +35,9 @@ A requirement for the proper working of this subcommand is the presence of human
 The required arguments of this subcommand are:
 `python cfdna_practical.py generate-fasta --dataset 'name of dataset' --freqfile 'file.txt' --lenfile 'file.txt'`
 
-Freqfile indicates a file that harbours the frequencies of reads per chromosome. This file can be generated with the function make_file_with_freqlengths found in the file otherfunctions.py. It is a .txt file and looks the following: 
+Freqfile indicates a file that harbours the frequencies of reads per chromosome. 
 
-chr1    473764
-
-chr2    734635
-
-...
-
-Lenfile indicates a file that harbours the length of each sequence, each written on a newline. 
+Lenfile indicates a file that harbours the length of each sequence, each written on a newline. This file can be generated with the function make_file_with_freqlengths found in the file otherfunctions.py. 
 
 Dataset indicates the name of the dataset that you are analysing so that this can be used to write new filenames.
 
@@ -102,7 +96,7 @@ Set to True if you want to save a figure of the plot, it will be saved in a file
 
 This is the path to the location the plot is saved. 
 
-The output of the subcommand `motif-analysis` is a dictionary printed in the command line which harbours how many times each end motif occurs. Optionally, a histogram which visualizes the dictionary can be saved. 
+The output of the subcommand `motif-analysis` is a dictionary printed in the command line which harbours how many times each end motif occurs. Optionally, a histogram which visualizes the cfDNA end motif distribution can be saved. 
 
 ## License
 This project is licensed under the MIT license. 
