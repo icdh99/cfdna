@@ -13,7 +13,7 @@ Required packages:
 - Other default packages used in this package: collections, random
 
 ### Installing
-Create a new conda environment and install all the required python packages as listed above. The package is tested with python 3.6.
+Create a new conda environment and install all the required python packages as listed above. The package is tested with Python 3.6.
 
 ## Usage
 The script can work with both .bam and .fa files. There are two main functionalities: (1) generation of a simulated cfdna .fa file by random choice from A, T, G, or C, or by randomly sampling fragments from a genome, and (2) cfdna end motif analysis. The two functionalities are selected using subcommands `generate-fasta` and `motif-analysis`. Below we demonstrate how to use the subcommands, what options and arguments to supply, and what output will be generated. 
@@ -30,12 +30,12 @@ The script can work with both .bam and .fa files. There are two main functionali
 This subcommand can either generate a control .fa file according to provided information about a dataset, or it can generate a .fa file with randomly generated sequences. 
 
 #### Simulate cfdna reads by random sampling from a genome based on given cfdna length distribution and frequency per chromosome: control .fa file
-A requirement for the proper working of this subcommand is the presence of human .fa files in your folder. (VERDER UITLEGGEN)
+A requirement for the proper working of this subcommand is the presence of human .fa files in your folder. The function make_clean_fasta can be found in the file otherfunctions.py. Fasta files downloaded from https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/  are stripped into a clean format. 
 
 The required arguments of this subcommand are:
 `python cfdna_practical.py generate-fasta --dataset 'name of dataset' --freqfile 'file.txt' --lenfile 'file.txt'`
 
-Freqfile indicates a file that harbours the frequencies of reads per chromosome. It is a .txt file and looks the following: 
+Freqfile indicates a file that harbours the frequencies of reads per chromosome. This file can be generated with the function make_file_with_freqlengths found in the file otherfunctions.py. It is a .txt file and looks the following: 
 
 chr1    473764
 
