@@ -20,5 +20,7 @@ def plot_kmer_dist(motifs, ind, colors=['blue', "red", "teal", "yellow"],path = 
 def plot_all(df, path, figsize = (10,4)):
     plot_kmer_dist([df['fwd5'], df['fwd3']], ["fwd 5' end", "fwd 3' end"], [ "red", "blue"], path, figsize = figsize)
 
+
 def plot_all_random(df, path, figsize = (10,4)):         #to give the randomly generated .fa files a different colour scheme 
     plot_kmer_dist([df['fwd5'], df['fwd3']], ["fwd 5' end", "fwd 3' end"], [ "goldenrod", "teal"], path, figsize = figsize)
+
