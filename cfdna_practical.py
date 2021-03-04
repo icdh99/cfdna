@@ -23,10 +23,8 @@ def motif_analysis(bamfile, fastafile, saveplot, motifsize, path):
     This subcommand performs the motif analysis. It returns a dictionary with the frequency of each motif and a plot of these frequencies. 
     """
     if bamfile != None:
-        #print('there is a bamfile')
         analyse_bamfile(bamfile, motifsize, saveplot, path)
     if fastafile != None:
-        #print('there is a fastafile')
         analyse_fastafile(fastafile, motifsize, saveplot, path)
 
 def analyse_bamfile(bamfile, motifsize, saveplot, path):
